@@ -7,4 +7,4 @@ Hello and welcome to Skyminer! In this game you must send missions to various as
 
 ### Changelog
 ---
-_(No builds of Skyminer have been made public yet.)_
+**2017-02-14:** Skyminer 0.10 is [live](https://thepixelguy.github.io/skyminer)!
