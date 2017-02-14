@@ -3,8 +3,11 @@ _A simple game about mining up asteroids for precious metals._
 
 Hello and welcome to Skyminer! In this game you must send missions to various asteroids in order to gather their resources. These robotic missions do not always end in success, however. Successful missions grant you experience points or XP, as well as some money. XP makes failure less common.
 
-[Read the changelog for more information about the current version.]
+[Read the changelog for more information about the current version and how it works.]
 
 ### Changelog
 ---
-**2017-02-14:** Skyminer 0.10 is [live](https://thepixelguy.github.io/skyminer)!
+**2017-02-14:** Skyminer 0.10 is [live](https://thepixelguy.github.io/skyminer)! It includes:
+* **Experience points** For every successful mission you send up, you gain 1 experience point (XP). The way failures are calculated is that JavaScript picks a decimal from 0 to 1, multiplies it by (XP+1), and if it is bigger than 0.5, the mission succeeds. These XP points will also be able to unlock new upgrades in future versions.
+* **Shopping** Right now, I've only added one upgrade - Drill Upgrades. This will multiply the multiplier of the ore's value by 1.5, but also multiply drill costs and launch costs by 1.1. Tip: Eventually, the multiplier's change will become negligible and the cost of the drills and launch costs will become overwhelming, so don't buy too much of these.
+* **Saving and Loading** Saving and loading is simple - press the save and load buttons. There's also an extra button for resetting your save and starting over. **WARNING:** Erasing your browser data will destroy your save. The next version will have copypasta-based saving as an option. **WARNING:** Attempting to load a blank save (when the save indicator says "null") will break launching systems.
