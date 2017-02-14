@@ -1,0 +1,58 @@
+body {
+    background: black;
+    color: lime;
+    font-family: monospace;
+}
+img {
+    image-rendering: pixelated;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2px;
+    display: block;
+}
+button {
+    background: black;
+    color: lime;
+    font-family: monospace;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2px;
+    display: block;
+}
+button:active {
+    background: lime;
+    color: black;
+}
+button:focus {
+    outline: none;
+}
+.border {
+    border: 1px solid lime;
+}
+.panel {
+    width: calc(50vw - 24px);
+    margin: 2px;
+    padding: 2px;
+}
+.centered {
+    text-align: center;
+}
+.inverted {
+    background: lime;
+    color: black;
+}
+.invisible {
+    display: none;
+}
+.linear {
+    margin: 0;
+    margin-right: -6px;
+    display: inline-block;
+}
+#header {
+    font-size: 1.25em;
+}
+#launch {
+    width: 68px;
+}
