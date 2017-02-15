@@ -24,8 +24,17 @@ button:active {
     background: lime;
     color: black;
 }
-button:focus {
+button:focus, input:focus {
     outline: none;
+}
+a {
+    color: lime;
+    text-decoration: none;
+}
+input {
+    background: lime;
+    color: black;
+    font-family: monospace;
 }
 .border {
     border: 1px solid lime;
@@ -48,6 +57,7 @@ button:focus {
 .linear {
     margin: 0;
     margin-right: -6px;
+    margin-bottom: 2px;
     display: inline-block;
 }
 #header {

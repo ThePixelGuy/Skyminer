@@ -14,60 +14,88 @@
         <meta name="keywords" content="minecraft,asteroid,mining,space,resources,pixel,minimal">
     </head>
     <body>
-        <div class="inverted" id="header">Skyminer == 0.10 (pre-alpha) == Created by -ThePixelGuy- on 2017-02-10.</div><br>
+        <div id="body" class="invisible">
         
-        <div class="panel">
-            <div class="border panel" id="panel00">Statistics</div>
-            <div class="border panel" id="panel10">
-                EXPERIENCE: <strong id="xp"></strong><br>
-                CREDITS: <strong id="credits"></strong><br><br>
-                <button class="linear border" onclick="save()">Save</button>
-                <button class="linear border" onclick="load()">Load</button>
-                <button class="linear border" onclick="reset()">Reset</button>
-                <button class="linear border" onclick="readme()">README First</button><br><br>
-                <span id="save"></span>
-            </div>
-        </div>
+            <div class="inverted" id="header">Skyminer == 0.11 (pre-alpha) == Created by -ThePixelGuy- on 2017-02-14.</div><br>
         
-        <div class="panel">
-            <div class="border panel" id="panel01">Mission Control</div>
-            <div class="border panel" id="panel11">
-                <img class="border" id="launch" src="images/launch.gif">
-                <button class="border" onclick="sendMission()" id="launchButton"></button>
-                <div class="centered inverted">MISSION STATUS: <strong id="action">N/A</strong></div>
-            </div>
-        </div>
-        
-        <div class="panel">
-            <div class="border panel" id="panel02">Shop</div>
-            <div class="border panel" id="panel12">
-                <div class="" id="item0">
-                    <div class="inverted">DRILL UPGRADE - ¢<span id="drill"></span></div>
-                    <ul>
-                        <li>Multiplies ore value multiplier by 1.5. (Current multiplier: <span id="multiplier"></span>)</li>
-                        <li>Multiplies launch cost by 1.1.</li>
-                    </ul>
-                    <button class="border" onclick="drills()" id="drills">Buy</button>
+            <div class="panel">
+                <div class="border panel" id="panel00">Statistics</div>
+                <div class="border panel" id="panel10">
+                    EXPERIENCE: <strong id="xp"></strong><br>
+                    CREDITS: <strong id="credits"></strong><br><br>
+                    <button class="linear border" onclick="save()">Save</button>
+                    <button class="linear border" onclick="load()">Load</button>
+                    <button class="linear border" onclick="reset()">Reset</button><br>
+                    <button class="linear border" onclick="textSave()">Text Save</button>
+                    <button class="linear border" onclick="textLoad()">Text Load</button><br>
+                    <button class="linear border" onclick="readme()">README First</button><br><br>
+                    <span id="save"></span>
                 </div>
             </div>
+        
+            <div class="panel">
+                <div class="border panel" id="panel01">Mission Control</div>
+                <div class="border panel" id="panel11">
+                    <img class="border" id="launch" src="images/launch.gif">
+                    <button class="border" onclick="sendMission()" id="launchButton"></button>
+                    <div class="centered inverted">MISSION STATUS: <strong id="action">N/A</strong></div>
+                </div>
+            </div>
+        
+            <div class="panel">
+                <div class="border panel" id="panel02">Shop</div>
+                <div class="border panel" id="panel12">
+                    <div id="item0">
+                        <div class="inverted">DRILL UPGRADE - ¢<span id="drill"></span></div>
+                        <ul>
+                            <li>Multiplies ore value multiplier by 1.5. (Current multiplier: <span id="multiplier"></span>)</li>
+                            <li>Multiplies launch cost by 1.1.</li>
+                        </ul>
+                        <button class="border" onclick="drills()" id="drills">Buy</button>
+                    </div>
+                    <div id="item1">
+                        <div class="inverted">BOOSTER DOWNGRADE - <span id="booster"></span>XP</div>
+                        <ul>
+                            <li>Multiplies launch cost by 0.9.</li>
+                            <li>XP loss will increase chance of failure.</li>
+                        </ul>
+                        <button class="border" onclick="boosters()" id="boosters">Buy</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="panel">
+                <div class="border panel" id="panel03">Credits</div>
+                <div class="border panel" id="panel13">
+                    <u><b>ART, PROGRAMMING AND CONCEPT</b></u><br>
+                    <a href="javascript:devTool()">-ThePixelGuy-</a><br><br>
+                
+                    <u><b>ALPHA/BETA TESTERS</b></u><br>
+                    P0T4T0M4N<br><br>
+                
+                    <u><b>SPECIAL THANKS</b></u><br>
+                    Markus "Notch" Persson (<i>Minecraft</i>, 2011)<br>
+                    Julien "Orteil" Thiennot (<i>Cookie Clicker</i>, 2013)<br>
+                    Aniwey (<i>Candy Box</i> and <i>Candy Box 2</i>, 2013)<br><br>
+                
+                    ...for inspiring me to create this game.
+                </div>
+            </div>
+            
+            <div class="invisible panel" id="devTool">
+                <div class="border panel" id="panel04">Dev Keypad</div>
+                <div class="border panel" id="panel14">
+                    <button class="linear border" onclick="devInput()">Enter Cheat Code</button><br>
+                    <input id="keypad" class="border"><br><br>
+                    <span id="cheatOutput">...</span>
+                </div>
+            </div>
+            
         </div>
         
-        <div class="panel">
-            <div class="border panel" id="panel03">Credits</div>
-            <div class="border panel" id="panel13">
-                <u><b>ART, PROGRAMMING AND CONCEPT</b></u><br>
-                -ThePixelGuy-<br><br>
-                
-                <u><b>ALPHA/BETA TESTERS</b></u><br>
-                P0T4T0M4N<br><br>
-                
-                <u><b>SPECIAL THANKS</b></u><br>
-                Markus "Notch" Persson (<i>Minecraft</i>, 2011)<br>
-                Julien "Orteil" Thiennot (<i>Cookie Clicker</i>, 2013)<br>
-                Aniwey (<i>Candy Box</i> and <i>Candy Box 2</i>, 2013)<br><br>
-                
-                ...for inspiring me to create this game.
-            </div>
+        <div id="intro">
+            <span id="intro1" class="invisible">Booting DoorOS 0.11...</span><br>
+            <span id="intro2" class="invisible">Opening space_agency_manager.exe...</span>
         </div>
     </body>
 </html>
